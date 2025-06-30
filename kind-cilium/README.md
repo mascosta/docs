@@ -1,4 +1,4 @@
-# Usando o KIND com Cilium
+# 📌 Usando o KIND com Cilium
 
 Saudações! Caso você esteja querendo começar nos estudos de segurança, envolvendo um cluster kubernetes, aqui vai um breve tutorial de como iniciar esses estudos.
 
@@ -11,7 +11,7 @@ E pra finalizar, vamos realizar um laboratório simples, mostrando o funcionamen
 Antes de começarmos, é necessário que o docker esteja instalado na máquina. Outros ContainerRuntimes não foram validados. ¯\\\_(ツ)_/¯
 
 
-## 1 - Instalação do KIND
+## 1 - Instalação do KIND 🐋
 
 A documentação da ferramenta já é muito boa, vou deixar [aqui o link](https://kind.sigs.k8s.io/docs/user/quick-start/#installing-from-release-binaries) pra facilitar a navegação.
 
@@ -46,7 +46,7 @@ E carregar as configurações com o comando:
 source ~/.bashrc
 ```
 
-## 2 - Criação do cluster
+## 2 - Criação do cluster ☸
 
 Com o binário baixado, agora é necessária a criação do cluster, para esse exemplo que não é padrão duas coisas precisam ser levadas em consideração:
 
@@ -135,7 +135,7 @@ local-path-storage   local-path-provisioner-7dc846544d-7vxzw          0/1     Pe
 
 Evidenciando que alguns pods estão em STATUS **Pending**, o que será tratado a seguir.
 
-## 3 - Configurando o Cilium
+## 3 - Configurando o Cilium 🐝
 
 A "pendência" do passo anterior se dá pela não existência, ainda, da interface de rede local do cluster, que é responsável pela comunicação entre os objetos.
 
@@ -208,7 +208,7 @@ kube-system          kube-scheduler-cluster1-control-plane            1/1     Ru
 local-path-storage   local-path-provisioner-7dc846544d-7vxzw          1/1     Running   0          21m
 ```
 
-## 4 - Bonus Track (Completions)
+## 4 - Bonus Track (Completions) 🐌
 
 Nesse guia foram abordados 3 binários principais:
 
@@ -226,7 +226,7 @@ source <(cilium completion bash)
 
 E depois recarregar com o comando ```source ~/.bashrc``` :)
 
-## 5 - Laboratório simples
+## 5 - Laboratório simples 💻
 
 Já com o ambiente configurado, será feita a criação de alguns objetos para validação e criação de políticas de rede (*NetworkPolicies*) internas do cluster.
 
@@ -473,7 +473,7 @@ curl: (28) Failed to connect to 10.244.3.20 port 80 after 130339 ms: Couldn't co
 command terminated with exit code 28
 ```
 
-## 6 - Removendo o cluster
+## 6 - Removendo o cluster 👻
 
 Caso deseje encerrar o ambiente e liberar os recursos utilizados pelos containers do KIND, é possível deletar todo o cluster com um único comando.
 
