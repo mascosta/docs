@@ -11,7 +11,7 @@ E pra finalizar, vamos realizar um laboratório simples, mostrando o funcionamen
 Antes de começarmos, é necessário que o docker esteja instalado na máquina. Outros ContainerRuntimes não foram validados. ¯\\\_(ツ)_/¯
 
 
-## 1 - Passo: Instalação do KIND
+## 1 - Instalação do KIND
 
 A documentação da ferramenta já é muito boa, vou deixar [aqui o link](https://kind.sigs.k8s.io/docs/user/quick-start/#installing-from-release-binaries) pra facilitar a navegação.
 
@@ -50,10 +50,10 @@ source ~/.bashrc
 
 Com o binário baixado, agora é necessária a criação do cluster, para esse exemplo que não é padrão duas coisas precisam ser levadas em consideração:
 
-#### I - A instalação não usará o CNI padrão, então, é necessário desabilitá-lo.
+**I - A instalação não usará o CNI padrão, então, é necessário desabilitá-lo.**
 
 
-#### II - O Cilium precisa de algumas "permissões" dentro do sistema operacional que o usuário comum não tem, sendo necessária a execução como root nos passos a seguir. 
+**II - O Cilium precisa de algumas "permissões" dentro do sistema operacional que o usuário comum não tem, sendo necessária a execução como root nos passos a seguir.** 
 
 Obs.: Caso queira contribuir com como fazer essa configuração sem usar o usuário root, fique a vontade ;)
 
@@ -141,7 +141,7 @@ A "pendência" do passo anterior se dá pela não existência, ainda, da interfa
 
 Para esse questão, basta realizar a instalação do cilium que, como em passos anteriores, possui mais de um método para instalação, referenciado no começo desse guia.
 
-Nesse laboratório que será construído, será adotada a instalação através da CLI, que usa o [HELM](https://helm.sh/) em backgroud para a tarefa. Seguem os comandos para instalação da CLI:
+Nesse laboratório que será construído, será adotada a instalação através da CLI, que usa o [HELM](https://helm.sh/) em background para a tarefa. Seguem os comandos para instalação da CLI:
 
 ```bash
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
@@ -240,7 +240,7 @@ O cenário para o experimento será construído da seguinte forma:
 | debuga | ns-a | x
 | debugb | ns-a | x
 
-O pod **debug1** realizará um acesso ao serviço HTTP do pod **web-server** no namespace **ns-a**.
+**SPOILER**: Após a aplicação das políticas de rede, apenas o pod **debuga** realizará um acesso ao serviço HTTP do pod **web-server** no namespace **ns-a**.
 
 Para o cenário, serão necessários alguns passos, descritos a seguir:
 
@@ -349,7 +349,7 @@ spec:
         name: debian
 ```
 
-Em seguida, criar os objetos através do comando 
+Em seguida, considerando que todos os arquivos *YAML* criados estejam no mesmo diretório, criar os objetos através do comando:
 
 ```bash
 kubectl create -f .
@@ -499,6 +499,6 @@ Isso irá:
 kind get clusters
 ```
 
-💡 Dica: Sempre remova o cluster quando terminar seus testes, principalmente em máquinas com recursos limitados ou ambientes compartilhados.
+💡 **Dica**: Sempre remova o cluster quando terminar seus testes, principalmente em máquinas com recursos limitados ou ambientes compartilhados.
 
 Bem, por esse guia é isso, espero que ajude! <o
