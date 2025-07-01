@@ -13,6 +13,10 @@ Aqui você vai encontrar:
 - Experimentos com ferramentas como Cilium, KIND, Trivy, entre outros
 - Materiais de apoio utilizados em workshops, aulas e palestras
 
+## 📋 Em alguns guias, será necessário o uso de um editor de texto.
+
+Para isso, fiz um vídeo explicando o básico do ```vim``` e seu arquivo de configuração ```.vimrc```, nesse [link](https://youtu.be/KRIGeRzVdBs?si=h0GvTxHc0fOR5ooe)
+
 ## 📬 Contribuições
 
 Ainda está em fase inicial, mas sugestões e melhorias são sempre bem-vindas! Fique à vontade para abrir *issues* ou mandar um *pull request*.
