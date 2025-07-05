@@ -1,4 +1,4 @@
-# 📌 Usando o KIND com NGINX Controller
+# 📌 Kubernetes com KIND + NGINX Ingress: simplificando a entrada de conexões HTTP
 
 Nesse guia, será abordado o uso do nginx como controlador de conexões entrantes HTTP.
 
