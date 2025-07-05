@@ -238,7 +238,7 @@ O cenário para o experimento será construído da seguinte forma:
 -----|------------|----------
 | web-server | ns-a | 80/TCP
 | debuga | ns-a | x
-| debugb | ns-a | x
+| debugb | ns-b | x
 
 **SPOILER**: Após a aplicação das políticas de rede, apenas o pod **debuga** realizará um acesso ao serviço HTTP do pod **web-server** no namespace **ns-a**.
 
@@ -501,4 +501,11 @@ kind get clusters
 
 💡 **Dica**: Sempre remova o cluster quando terminar seus testes, principalmente em máquinas com recursos limitados ou ambientes compartilhados.
 
-Bem, por esse guia é isso, espero que ajude! <o
+Neste guia abordamos os seguintes pontos:
+
+- Criação de cluster usando o KIND
+- Uso de CNI não padrão, o Cilium
+- Criação de Namespaces e Deployments para validação da configuração
+- Criação de NetworkPolicy para restrição de acessos e teste básicos
+
+Espero que possa ter ajudado e, caso tenha alguma sugestão de melhoria ou correção, não deixe de contribuir também! :D
